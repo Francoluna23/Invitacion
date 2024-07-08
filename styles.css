@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7c0c0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.invitation-1, .invitation-2, .invitation-3 {
+    width: 600px;
+    height: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.invitation-1 {
+    background-image: url('./img/fondo1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.invitation-1 h1 {
+    font-family: "WindSong", cursive;
+    font-weight: 500;
+    font-size: 60px;
+    padding-top: 5%;
+}
+
+.invitation-2 {
+    background-image: url('./img/floral.png');
+    padding: 20px;
+}
+.invitation-3 {
+    background-image: url('./img/floral2.png');
+    background-size: cover;
+    padding: 20px;
+}
+
+.invitation-2 p {
+    padding-top: 20%;
+}
+
+.invitation-3 h1 {
+    font-family: "WindSong", cursive;
+    font-weight: 500;
+    font-size: 50px;
+    padding-top: 20%;
+}
+
+.destileria{
+    padding-top: 5%;
+}
+
+.destileria img {
+    width: 85%;
+    height: 85%;
+    object-fit: cover; /* ajusta la imagen para cubrir todo el contenedor */
+    border-radius: 3%;
+}
+
+.date {
+    padding-top: 70%;
+}
+.date h1 {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 80px;
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+.date h2 {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 44px;
+}
+
+.date p {
+    font-family: "Forum", serif;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+.grid-item {
+    background-color: aqua;
+    color: white;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url('./img/1.png');
+}
+
+.grid-item:nth-child(2) {
+    background-image: url('./img/2.png');
+}
+
+.grid-item:nth-child(3) {
+    grid-row: span 2;
+    background-image: url('./img/3.png');
+}
+
+.grid-item:nth-child(4) {
+    background-image: url('./img/4.png');
+}
+
+.grid-item:nth-child(5) {
+    background-image: url('./img/5.png');
+}
+
+.invitation-2 p {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.invitation-3 label, button {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.invitation-3 a {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color del texto */
+}
+
+.invitation-3 a:hover {
+    color: #004d40; /* Cambia el color del enlace al pasar el cursor */
+    text-decoration: underline; /* Añade una línea inferior al pasar el cursor, si lo deseas */
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .invitation-1, .invitation-2 {
+        width: 91%;
+        height: auto;
+    }
+    
+    .invitation-1 h1 {
+        font-size: 40px;
+        padding-top: 60px;
+    }
+
+    .invitation-2 h1 {
+        font-size: 35px;
+    }
+
+    .date h1 {
+        font-size: 50px;
+        margin: 20px 5px;
+    }
+
+    .date h2 {
+        font-size: 30px;
+    }
+
+    .date p {
+        font-size: 12px;
+    }
+
+    .invitation-2 p {
+        font-size: 30px;
+    }
+    
+    
+}
+/* Media Queries */
+@media (max-width: 592px) {
+    .grid-item:nth-child(5) {
+        grid-column: span 2;
+        background-image: url('./img/5.png');
+    }
+}
+
+@media (max-width: 540px) {
+    .invitation-1, .invitation-2 {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .invitation-1 {
+        height: auto;
+    }
+
+    .invitation-2 {
+        height: auto;
+    }
+
+    .invitation-1 h1 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .invitation-2 h1 {
+        font-size: 25px;
+    }
+
+    .date h1 {
+        font-size: 30px;
+        margin: 10px 2px;
+    }
+
+    .date h2 {
+        font-size: 20px;
+    }
+
+    .date p {
+        font-size: 10px;
+    }
+
+    .invitation-2 p {
+        font-size: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .grid-item {
+        height: 150px;
+    }
+
+    .grid-item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 300px;
+    }
+    .grid-item:nth-child(3) {
+        grid-row: span 1;
+        background-image: url('./img/3.png');
+    }
+    .grid-item:nth-child(5) {
+        grid-column: span 1;
+        background-image: url('./img/5.png');
+    }
+}
