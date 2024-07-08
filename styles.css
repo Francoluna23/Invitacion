@@ -229,16 +229,12 @@ input {
 }
 
 @media (max-width: 540px) {
-    .invitation-1, .invitation-2 {
+    .invitation-1, .invitation-2, .invitation-3 {
         width: 100%;
         padding: 20px;
     }
     
-    .invitation-1 {
-        height: auto;
-    }
-
-    .invitation-2 {
+    .invitation-1, .invitation-2, .invitation-3 {
         height: auto;
     }
 
@@ -249,6 +245,9 @@ input {
 
     .invitation-2 h1 {
         font-size: 25px;
+    }
+    .invitation-3 h1 {
+        font-size: 35px;
     }
 
     .date h1 {
@@ -264,7 +263,7 @@ input {
         font-size: 10px;
     }
 
-    .invitation-2 p {
+    .invitation-2 p, .invitation-3 p{
         font-size: 20px;
     }
 
