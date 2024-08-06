@@ -57,19 +57,10 @@ body {
     font-family: "WindSong", cursive;
     font-weight: 500;
     font-size: 50px;
-    padding-top: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
-.destileria{
-    padding-top: 5%;
-}
-
-.destileria img {
-    width: 85%;
-    height: 85%;
-    object-fit: cover; /* ajusta la imagen para cubrir todo el contenedor */
-    border-radius: 3%;
-}
 
 .date {
     padding-top: 70%;
@@ -93,7 +84,8 @@ body {
 .date p {
     font-family: "Forum", serif;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 16px;
+    padding-top: 8px;
 }
 
 .grid {
@@ -149,7 +141,7 @@ body {
 }
 
 button {
-    background-color: #00796b;
+    background-color: #f7c0c0;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -158,7 +150,7 @@ button {
 }
 
 button:hover {
-    background-color: #004d40;
+    background-color: #f7c0c07e;
 }
 
 form {
@@ -171,7 +163,7 @@ label {
 }
 
 input {
-    padding: 10px;
+    padding: 10px 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -182,10 +174,66 @@ input {
 }
 
 .invitation-3 a:hover {
-    color: #004d40; /* Cambia el color del enlace al pasar el cursor */
+    color: #f7c0c0; /* Cambia el color del enlace al pasar el cursor */
     text-decoration: underline; /* Añade una línea inferior al pasar el cursor, si lo deseas */
 }
-/* Media Queries */
+label {
+    display: block;
+}
+#sabado {
+    margin-top: 30px;
+}
+
+.nombre-container {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+.nombre-container input {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#add-button {
+    padding: 5px 12px;
+    font-size: 16px;
+}
+#comida {
+    width: 90%;
+    font-size: 16px;
+}
+#confirmar-form{
+    border-style: hidden;
+}
+.social-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.social-links ul {
+    display: flex;
+    gap: 18px;
+    list-style-type: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #f7c0c07e;
+    width: 100%;
+    padding: 10px 5px 1px 10px;
+}
+#des{
+    margin-left: 50px;
+}
+ /*Media Queries */
 @media (max-width: 768px) {
     .invitation-1, .invitation-2 {
         width: 91%;
@@ -239,8 +287,9 @@ input {
     }
 
     .invitation-1 h1 {
-        font-size: 30px;
+        font-size: 42px;
         padding-top: 20px;
+        margin-bottom: 30%;
     }
 
     .invitation-2 h1 {
@@ -251,20 +300,23 @@ input {
     }
 
     .date h1 {
-        font-size: 30px;
+        font-size: 50px;
         margin: 10px 2px;
     }
 
     .date h2 {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .date p {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .invitation-2 p, .invitation-3 p{
-        font-size: 20px;
+        font-size: 25px;
+    }
+    .invitation-2 p{
+        padding-top: 15px;
     }
 
     .grid {
@@ -289,4 +341,25 @@ input {
         grid-column: span 1;
         background-image: url('./img/5.png');
     }
+    .invitation-3 label{
+        font-size: 18px;
+    }
+    .invitation-3 h1{
+        font-size: 32px;
+    }
+    .nombre-container{
+        align-items: center;
+        font-size: 18px;
+    }
+    .social-links ul {
+        gap: 10px;
+        padding: 10px 5px 5px 10px;
+    }
+    .social-links p{
+        font-size: 14px;
+    }
+    #des{
+        margin-left: 15px;
+    }
+    
 }

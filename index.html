@@ -33,21 +33,101 @@
       <p>La Araucaria, Chivilcoy,<br> Buenos Aires</p>
     </div>
     <div class ="invitation-3">
-        <div class="destileria">
-            <img src="./img/DESTILERIA.jpg" alt="">
-        </div>
         <h1 class="title">Confirmar Asistencia</h1>
+        <div class='social-links'>
+            <ul>
+                <li>
+                    <p><b>La Araucaria:</b></p>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/araucaria.eventos?igsh=Z292Ymt3M3kwNmcw" title="La Araucaria">
+                        <img src="img/icono instagram1.svg" alt='Instagram'>                       
+                    </a>
+                </li>
+                <li>
+                    <a href="https:" title="La Araucaria">
+                        <img src="img/maps.png" alt='Maps'>
+                    </a>
+                </li> 
+                <li id="des">
+                    <p><b>Estancia "La destilería":</b></p>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/estancialadestileria?igsh=MW9pZTVreGplYWE3aw%3D%3D" title="La Destilería">
+                        <img src="img/icono instagram1.svg" alt='Instagram'>                       
+                    </a>
+                </li>
+                <li>
+                    <a href="https:" title="La Destilería">
+                        <img src="img/maps.png" alt='Maps'>
+                    </a>
+                </li>                        
+            </ul>
+        </div>
         <form id="confirmar-form">
-          <label for="nombre" style="font-size: 25px;">Nombre y apellido:</label>
-          <input type="text" id="nombre" name="nombre" required>
-          <label for="sabado">Sabado 28/12 19:00hs en <a href="https://www.instagram.com/araucaria.eventos?igsh=Z292Ymt3M3kwNmcw" target="_blank">La Araucaria</a>: 
-            <input type="checkbox" id="sabado" name="sabado">
+          <div class="nombre-container">
+              <label for="nombre">Nombre y apellido:</label>
+              <input type="text" id="nombre" name="nombre" required>
+              <button type="button" id="add-button">+</button>
+          </div>
+          <label for="sabado">Sábado 28/12 19:00hs en 
+              <a href="https://www.instagram.com/araucaria.eventos?igsh=Z292Ymt3M3kwNmcw" target="_blank">La Araucaria</a>: 
+              <input type="checkbox" id="sabado" name="sabado">
           </label>
-          <label for="domingo">Domingo 29/12 a partir del mediodia en <a href="https://www.instagram.com/estancialadestileria?igsh=MW9pZTVreGplYWE3aw%3D%3D" target="_blank">Estancia "La destileria"</a>: 
-            <input type="checkbox" id="domingo" name="domingo">
-          </label>           
-          <button type="submit">Enviar</button>
-        </form>
-    </div>
+          <label for="domingo">Domingo 29/12 a partir del mediodía en 
+              <a href="https://www.instagram.com/estancialadestileria?igsh=MW9pZTVreGplYWE3aw%3D%3D" target="_blank">Estancia "La destilería"</a>: 
+              <input type="checkbox" id="domingo" name="domingo">
+          </label> 
+          <div class="comida-res">
+            <textarea type="text" id="comida" name="comida" placeholder="Indique si posee alguna restricción alimenticia:" style="width: 90%; height: 10vh; font-size: 16px; padding-right: 0;padding-left: 10px;padding-top: 10px; margin-top: 15px;"></textarea>
+            
+        </div>          
+          <button type="submit" style="margin-bottom: 10px; margin-top: 4px;">Enviar</button>
+      </form>
+    <script>
+        // Inicializar un contador
+        var containerCounter = 1;
+    
+        document.getElementById('add-button').addEventListener('click', function() {
+            // Crear un nuevo contenedor para el nuevo campo
+            var newContainer = document.createElement('div');
+            newContainer.className = 'nombre-container' + containerCounter;
+    
+            // Verificar el ancho de la ventana para aplicar el margen adecuado
+            if (window.innerWidth <= 540) {
+                newContainer.style.marginLeft = '52px';
+            } else {
+                newContainer.style.marginLeft = '120px';
+            }
+    
+            // Crear la nueva etiqueta y el nuevo campo de entrada
+            var newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'nombre' + containerCounter;
+            newInput.required = true;
+    
+            // Añadir la nueva etiqueta y el nuevo campo de entrada al nuevo contenedor
+            newContainer.appendChild(newInput);
+    
+            // Insertar el nuevo contenedor antes de los labels de los eventos
+            var form = document.getElementById('confirmar-form');
+            form.insertBefore(newContainer, form.querySelector('label[for="sabado"]'));
+    
+            // Incrementar el contador
+            containerCounter++;
+        });
+    
+        // Actualizar el margen de todos los contenedores al redimensionar la ventana
+        window.addEventListener('resize', function() {
+            var containers = document.querySelectorAll('[class^="nombre-container"]');
+            containers.forEach(function(container) {
+                if (window.innerWidth <= 540) {
+                    container.style.marginLeft = '52px';
+                } else {
+                    container.style.marginLeft = '120px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
